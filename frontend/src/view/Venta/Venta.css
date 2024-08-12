@@ -1,0 +1,36 @@
+.div-ventas{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: auto;
+}
+
+.img-card{
+    width: 200px;
+    height: 200px;
+}
+
+.aline{
+    text-align: center;
+}
+
+.negro{
+    font-weight: bold;
+}
+
+h3{
+    text-align: center;
+}
+
+.btn-pagar{
+    width: 200px;
+}
+
+.div-btn{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center;
+    align-items: center; */
+}

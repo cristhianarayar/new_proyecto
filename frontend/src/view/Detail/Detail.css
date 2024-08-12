@@ -1,0 +1,32 @@
+.detail{
+    display: flex;
+    flex-direction: row;
+    border: solid 1px black;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 900px;
+    height: 650px;
+}
+
+.detail-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid 1px black;
+}
+
+.detail-txt{   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    border: solid 1px black;
+    width: 500px;
+}
+
+.detail-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid 1px black;
+}

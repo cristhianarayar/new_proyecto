@@ -1,0 +1,32 @@
+.producto{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* width: 1500px; */
+ }
+
+ h3{
+    margin-top: 30px;
+    margin-bottom: 30px;
+ }
+
+ .txt-inp{
+    width: 500px;
+ }
+
+ .btn-accion{
+    display: flex;
+    flex-direction: row;
+    border-radius: 5px;
+    padding: 20px;
+ }
+
+ .btn-buscar{
+    margin-left: 35px;
+    margin-top: 15px;
+ }
+
+ .btn-add{
+   width: 150px;
+ }

@@ -1,0 +1,57 @@
+.div-carrito{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: auto;
+}
+
+
+.aline1{
+    text-align: center;
+}
+
+.aline2{
+    text-align: end;
+}
+
+.negro{
+    font-weight: bold;
+}
+
+h3{
+    text-align: center;
+}
+
+.btn-pagar{
+    width: 200px;
+}
+
+.td-img{
+    width: 190px;
+    height: 170px;
+}
+
+.img-card1{
+    width: 200px;
+    height: 150px;
+}
+
+.img-agr1{
+    background-image: url("../../src/assets/suma.png" );
+    background-size: cover;
+    background-color: transparent;
+    border: 0px;
+    width: 40px;
+    height: 40px;
+}
+
+.img-agr2{
+    background-image: url("../../src/assets/resta.png" );
+    background-size: cover;
+    background-color: transparent;
+    border: 0px;
+    width: 32px;
+    height: 32px;
+}

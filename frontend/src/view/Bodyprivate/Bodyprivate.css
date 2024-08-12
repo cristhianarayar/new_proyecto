@@ -1,0 +1,22 @@
+.body-market2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: auto;
+    margin-top: 40px;
+    margin-bottom: 57px;
+}
+
+.body-card2{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: auto;
+}
+
+.margen2{
+    padding: 20px;
+}

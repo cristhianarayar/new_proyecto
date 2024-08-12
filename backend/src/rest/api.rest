@@ -1,0 +1,166 @@
+
+###
+GET  http://localhost:3000/
+
+###
+GET  http://localhost:3000/home-private
+
+###
+GET http://localhost:3000/home-private/region
+
+
+###
+GET http://localhost:3000/home-private/region/1
+
+###
+GET http://localhost:3000/home-private/region/ciudad/1
+
+###
+POST  http://localhost:3000/login
+Content-Type: application/json   
+ 
+{ 
+    "rut": "126643675",
+    "password": "admin1w" 
+}
+
+###
+POST http://localhost:3000/crear-recuperar
+Content-Type: application/json
+
+{
+    "rut":"153357943",
+    "nombre":"Cristhian",
+    "apellido":"Araya",
+    "edad":"42",
+    "fono":"982072288",
+    "email":"cl@cl.cl",
+    "direccion":"los sauces 5711",
+    "region":"1",
+    "ciudad":"1",
+    "comuna":"1",
+    "password":"admin",
+    "image":"mi-imag en.jpg"
+}
+
+###
+POST http://localhost:3000/home-private/agregar
+Content-Type: application/json
+
+{
+    "categoria":"4",
+    "rut":"153357943",
+    "producto":"Auto Clasico",
+    "descripcion":"Otro Auto",
+    "cantidad":"12",
+    "valor":"15000",
+    "image":"MicroMachine",
+    "likes":"1"
+}
+
+###
+GET  http://localhost:3000/mi-perfil
+Content-Type: application/json
+Authorization:  Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJydXQiOiIxMjY2NDM2NzUiLCJpYXQiOjE3MjMyMTc4MjR9.MBs9qSUeMIrNG5mvif6kwjZM5utBiXyRleJh03sH4Ks
+
+###
+GET  http://localhost:3000/home-private/mi-tienda?rut=126643675
+
+###
+GET http://localhost:3000/home-private/actualizar?rut=126643675&producto=A
+
+
+###
+GET http://localhost:3000/home-private/mi-perfil/126643675
+
+###
+PUT http://localhost:3000/home-private/mi-perfil/126643675
+Content-Type: application/json
+
+{
+    "nombre":"Leonardos",
+    "apellido":"Villalobos",
+    "edad":"54",
+    "fono":"982072288",
+    "email":"cl@cl.cl",
+    "direccion":"los sauces 5711",
+    "region":"1",
+    "ciudad":"1",
+    "comuna":"1",
+    "image":"mi-imag en.jpg"
+}
+
+###
+PUT http://localhost:3000/home-private/mi-perfil/pass/126643675
+Content-Type: application/json
+
+{
+    "password":"admin1w"
+}
+
+###
+PUT http://localhost:3000/home-private/actualizar/1
+Content-Type: application/json
+
+{
+    "categoria":"4",
+    "producto":"Auto Hotwheels",
+    "descripcion":"Otro Auto",
+    "cantidad":"54",
+    "valor":"1500",
+    "image":"hotwheels",
+    "likes":"0"
+}
+
+###
+GET  http://localhost:3000/detalle/1
+
+###
+GET  http://localhost:3000/home-private/detalle-producto/1
+
+
+###
+POST http://localhost:3000/home-private/carrito
+Content-Type: application/json
+
+{
+    "id_detalle":"1",
+    "per_rut":"126643675",
+    "id_producto":"1",
+    "cantidad":"4",
+    "total":"12000"
+}
+
+###
+GET http://localhost:3000/home-private/carrito/126643675
+
+
+###
+PUT http://localhost:3000/home-private/actualizar/carrito/1
+Content-Type: application/json
+
+{
+    "id_producto":"1",
+    "cantidad":"54",
+    "total":"1500",
+    "per_rut":"126643675"
+}
+
+###
+POST http://localhost:3000/home-private/venta
+Content-Type: application/json
+
+{
+    "id_detalle":"1",
+    "direccion":"los sauces 5711",
+    "region":"1",
+    "ciudad":"1",
+    "comuna":"1",
+    "banco":"5",
+    "cuenta":"1",
+    "total":"150000",
+    "num_cuenta":"1234567890",
+}
+
+###
+GET http://localhost:3000/home-private/venta?id=1&rut=126643675&id_v=2&vta=true

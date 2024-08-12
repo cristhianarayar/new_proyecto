@@ -1,0 +1,41 @@
+.producto{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 1500px;
+ }
+
+ h3{
+    margin-top: 30px;
+    margin-bottom: 30px;
+ }
+
+ .txt-inp{
+    width: 500px;
+ }
+
+ .td-buscar{
+    display: flex;
+    flex-direction: row;
+    border: solid 1px gray;
+    border-radius: 5px;
+    padding: 20px;
+    background-color: #48929f;
+ }
+
+ .btn-buscar{
+    margin-left: 35px;
+    margin-top: 15px;
+ }
+
+ .margen{
+    padding: 20px;
+}
+
+.divcard{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}

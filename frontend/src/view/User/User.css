@@ -1,0 +1,79 @@
+.form-perfil {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.title {
+  display: flex;
+  flex-direction: row;
+  background-color: #48929f;
+}
+
+.subtitle {
+  text-align: center;
+  width: 700px;
+  background-color: #48929f;
+}
+
+h3 {
+  margin-top: 30px;
+}
+
+.img-title {
+  width: 200px;
+  text-align: center;
+}
+
+.img-perfil {
+  width: 150px;
+  height: 150px;
+}
+
+.form-user {
+  display: flex;
+  flex-direction: row;
+  width: 900px;
+}
+
+.form-datos {
+  margin-left: 30px;
+  width: 400px;
+  
+}
+
+.form-number {
+  margin-left: 30px;
+}
+
+.form-selec {
+    display: flex;
+    flex-direction: row;
+}
+
+.pass{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5px;
+}
+
+.btn-pass{
+    height: 40px;
+    margin-left: 40px;
+    margin-top: 15px;
+}
+
+.btn-udt{
+    width: 400px;
+    text-align: center;
+}
+
+.act{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

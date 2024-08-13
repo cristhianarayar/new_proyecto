@@ -7,7 +7,7 @@ const Headerpublic = () => {
   return (
     <div className="header-public flex-row" >
       <div className="header-int flex-row" >
-        <img src="./src/assets/home_public.png" className="img-logo img-fluid" />
+        <img src="../src/assets/home_public.png" className="img-logo img-fluid" />
       </div>
       <div className="header-int2 flex-row" >
        <NavLink to='/login' className='active'> 

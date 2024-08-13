@@ -25,7 +25,7 @@ const MicarProvider = ({ children }) => {
 
 	const logIn = async (userData) => {
 		
-		const response = await axios.post(`${VITE_SERVER_URL_LOCAL}/login`,userData) 
+		const response = await axios.post(`${VITE_SERVER_URL}/login`,userData) 
 		const {token} = response.data
 		return token
 	};
@@ -36,7 +36,7 @@ const MicarProvider = ({ children }) => {
 
 	const getPerfil = async () => {
 		const rut = userSession.rut
-		const response = await axios.get(`${VITE_SERVER_URL_LOCAL}/home-private/mi-perfil/${rut}`) 
+		const response = await axios.get(`${VITE_SERVER_URL}/home-private/mi-perfil/${rut}`) 
 		const usu = response.data
 		return usu 
 	}
@@ -69,70 +69,70 @@ const MicarProvider = ({ children }) => {
 		};
 
 		alert(nombre+apellido+edad+email+direccion+region+ciudad+comuna+image)
-		const response = await axios.put(`${VITE_SERVER_URL_LOCAL}/home-private/mi-perfil/${rut}`,userData) 
+		const response = await axios.put(`${VITE_SERVER_URL}/home-private/mi-perfil/${rut}`,userData) 
 		const actUsu = response.data
 		return actUsu 
 	}
 
 	const getDetPub = async (id) =>{
 
-		const userData = await axios.get(`${VITE_SERVER_URL_LOCAL}/detalle/${id}`)
+		const userData = await axios.get(`${VITE_SERVER_URL}/detalle/${id}`)
 		const data = userData.data
 		return data
 	}
 
 	const getDetPiv = async (id) =>{
 
-		const userData = await axios.get(`${VITE_SERVER_URL_LOCAL}/home-private/detalle-producto/${id}`)
+		const userData = await axios.get(`${VITE_SERVER_URL}/home-private/detalle-producto/${id}`)
 		const data = userData.data
 		return data
 	}
 
 	const getTienda = async () => {
-		const userData = await axios.get(`${VITE_SERVER_URL_LOCAL}/`)
+		const userData = await axios.get(`${VITE_SERVER_URL}/`)
 		const data = userData.data
 		return data
 	}
 
 	const getTiendaPrivate = async () => {
-		const userData = await axios.get(`${VITE_SERVER_URL_LOCAL}/home-private`)
+		const userData = await axios.get(`${VITE_SERVER_URL}/home-private`)
 		const data = userData.data
 		return data
 	}
 
 	const getMiTienda = async () => {
-		const userData = await axios.get(`${VITE_SERVER_URL_LOCAL}/home-private/mi-tienda?rut=126643675`)
+		const userData = await axios.get(`${VITE_SERVER_URL}/home-private/mi-tienda?rut=126643675`)
 		const data = userData.data
 		return data
 	}
 
 	const getCarrito = async () => {
-		const userData = await axios.get(`${VITE_SERVER_URL_LOCAL}/home-private/carrito/126643675`)
+		const userData = await axios.get(`${VITE_SERVER_URL}/home-private/carrito/126643675`)
 		const data = userData.data
 	return data
 	}
 
 	const getVenta = async () => {
-		const userData = await axios.get(`${VITE_SERVER_URL_LOCAL}/home-private/venta?id=1&rut=126643675&id_v=2&vta=true`)
+		const userData = await axios.get(`${VITE_SERVER_URL}/home-private/venta?id=1&rut=126643675&id_v=2&vta=true`)
 		const data = userData.data
 		window.location.href = '/home-private/venta';
 	return data
 	}
 
 	const getRegion = async () => {
-		const userData = await axios.get(`${VITE_SERVER_URL_LOCAL}/home-private/region`)
+		const userData = await axios.get(`${VITE_SERVER_URL}/home-private/region`)
 		const data = userData.data
 		return data
 	}
 
 	const getCiudad = async (id) => {
-		const userData = await axios.get(`${VITE_SERVER_URL_LOCAL}/home-private/region/${id}`)
+		const userData = await axios.get(`${VITE_SERVER_URL}/home-private/region/${id}`)
 		const data = userData.data
 		return data
 	}
 
 	const getComuna = async (id) => {
-		const userData = await axios.get(`${VITE_SERVER_URL_LOCAL}/home-private/region/ciudad/${id}`)
+		const userData = await axios.get(`${VITE_SERVER_URL}/home-private/region/ciudad/${id}`)
 		const data = userData.data
 		return data
 	}
@@ -168,7 +168,7 @@ const MicarProvider = ({ children }) => {
 			image,
 		};
 
-		 const response = await axios.post(`${VITE_SERVER_URL_LOCAL}/crear-recuperar`,userData)
+		 const response = await axios.post(`${VITE_SERVER_URL}/crear-recuperar`,userData)
 		 const {data} = response.data	
 		 return data
 

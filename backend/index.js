@@ -7,6 +7,6 @@ const PORT = process.env.PORT
 
 app.listen(PORT, async () => { 
     console.log(`Servidor corre en el PORT http://127.0.0.1:${PORT}`)
-    await database.query(initDatabase())
+    await (initDatabase())
     
 })

@@ -20,10 +20,11 @@ const Bodypublic = () => {
 
   return (
     <div className="body-market flex-column">
+      <h3>Productos</h3>
       <div className="body-card flex-row">
         {
           producto.map((produc, i) => ( 
-            <div className="margen flex-row" key={i}>
+            <div className="margen flex-row" key={i}>    
                 <Cardpublic prod = {produc} />
             </div>  
           ))

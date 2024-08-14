@@ -214,7 +214,7 @@ const mostrarTiendaUser = async (rut) => {
         const { rows } = await database.query(consulta,values)
       
         if(rows.length){
-          const prod = rows[0]
+          const prod = rows[0] 
           return prod
         }else{
           return {message:"El producto buscado no existe o la referencia es incorrecta",

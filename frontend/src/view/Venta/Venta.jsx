@@ -20,7 +20,7 @@ const Ventas = (props) => {
           <tr>
             <td>
               <Image
-                src="../src/assets/cardprueba.jpg"
+                src="../cardprueba.jpg"
                 rounded
                 className="img-card"
               />
@@ -32,7 +32,7 @@ const Ventas = (props) => {
           <tr>
             <td>
               <Image
-                src="../src/assets/cardprueba.jpg"
+                src="../cardprueba.jpg"
                 rounded
                 className="img-card"
               />

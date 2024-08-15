@@ -191,8 +191,7 @@ const mostrarTiendaUser = async (rut) => {
       const { rows } = await database.query(consulta);
   
       if (rows.length) {
-        const user = rows[0];
-  
+        const user = rows;
         return user;
       } else {
         return { message: "No existe productos cargados",

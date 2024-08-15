@@ -1,4 +1,4 @@
-const { postCtrLogin,postCtrRegistro,getCtrPerfil,getCtrlTienda,getCrtlUsu,getCtrlTiendaUser,postCtrRegProd,getCtrlBuscarProd, putCtrlPerfil, putCtrlPass, getCtrlDetalleProd, putCtrlProducto, postCtrlCarrito, getCtrlCarrito, putCtrlCarrito, postCtrlVenta, getCtrlVenta, getCtrlRegion, getCtrlCiudad, getCtrlComuna} = require ("../../controller/controllerMicar")
+const { getCtrlCategoria,postCtrLogin,postCtrRegistro,getCtrPerfil,getCtrlTienda,getCrtlUsu,getCtrlTiendaUser,postCtrRegProd,getCtrlBuscarProd, putCtrlPerfil, putCtrlPass, getCtrlDetalleProd, putCtrlProducto, postCtrlCarrito, getCtrlCarrito, putCtrlCarrito, postCtrlVenta, getCtrlVenta, getCtrlRegion, getCtrlCiudad, getCtrlComuna} = require ("../../controller/controllerMicar")
 const { validateLoginMiddleware } = require ('../../middlewares/loginMicar') 
 const { authMicar } = require ('../../middlewares/authMicar')
 const fileroute = require('express').Router()
@@ -10,6 +10,7 @@ fileroute.get("/home-private",getCtrlTienda)
 fileroute.get("/home-private/region",getCtrlRegion)
 fileroute.get("/home-private/region/:id",getCtrlCiudad)
 fileroute.get("/home-private/region/ciudad/:id",getCtrlComuna)
+fileroute.get("/home-private/producto/categoria",getCtrlCategoria)
 
 // ------> Post
 fileroute.post("/login",validateLoginMiddleware,postCtrLogin)

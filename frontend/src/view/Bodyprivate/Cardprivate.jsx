@@ -10,12 +10,11 @@ import { MicarContext } from "../../context/MicarProvider";
 const Cardprivate = (produc) => {
 
   const [show, setShow] = useState(false);
-  const {getDetPiv} = useContext(MicarContext)
+  const {getDetPiv, postCarrito} = useContext(MicarContext)
 
   const handleShow = async (id) => {
     setShow(true)
     const data = await getDetPiv(id)
-    console.log(data.cat_nom)
     const obj1 = document.getElementById('title')
     obj1.innerHTML = data.pro_nom
     const obj2 = document.getElementById('des')
@@ -30,6 +29,12 @@ const Cardprivate = (produc) => {
     obj6.innerHTML = data.nombre
   };
   const handleClose = () => setShow(false);
+
+  const postCarritos = (idpro,valor) => {
+
+      const data = [idpro,valor]
+    postCarrito(data) 
+  }
 
   return (
     <>
@@ -47,11 +52,11 @@ const Cardprivate = (produc) => {
             <Button variant="dark" className="ver" onClick={() => handleShow(produc.prod.id_prod)} >Ver Detalle</Button>
           </Card.Body>
         </Card>
-        <Modal show={show} onHide={handleClose}>
+        <Modal show={show} onHide={handleClose}> 
         <Modal.Header closeButton className="mod-title">
           <Modal.Title id = "title" ></Modal.Title>
         </Modal.Header>
-        <Modal.Body>  
+        <Modal.Body >  
           <div className="cuerpo">
               <div className="img-modal">
                 <Image src="../cardprueba.jpg" className="img-mod"/>
@@ -66,7 +71,7 @@ const Cardprivate = (produc) => {
           </div>
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="dark btn-car" onClick={handleClose}>
+          <Button variant="dark btn-car" onClick={()=>postCarritos(produc.prod.id_prod,produc.prod.pro_val)}>
             Agregar al Carrito
           </Button>
         </Modal.Footer>

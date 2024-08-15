@@ -37,7 +37,7 @@ const Carrito = (props) =>{
         <tbody>
           {
             producto.map((produc,i) => (
-              <tr key = {i} id = "{setId(i)}">
+              <tr key = {i} id = "grilla">
                 <td className="aline1 td-img"><Image src="../cardprueba.jpg" rounded className="img-card1"/></td>
                 <td className="aline1">{produc.pro_nom}</td>
                 <td className="aline1">{produc.pro_desc}</td>

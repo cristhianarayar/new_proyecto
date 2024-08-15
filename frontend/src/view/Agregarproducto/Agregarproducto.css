@@ -15,4 +15,10 @@
 
  .txt-inp{
     width: 500px;
+    padding: 10px;
+ }
+
+ .selector{
+   width: 500px;
+   padding: 10px;
  }

@@ -31,7 +31,16 @@ const MicarProvider = ({ children }) => {
 	};
 
 	const logOut = () => {
+	
+		setUserSession({
+			role: '',
+			rut: '',
+		});
 
+		setToken(null);
+
+		localStorage.removeItem('token');
+		localStorage.removeItem('session');
 	};
 
 	const getPerfil = async () => {
@@ -101,20 +110,22 @@ const MicarProvider = ({ children }) => {
 	}
 
 	const getMiTienda = async () => {
-		const userData = await axios.get(`${VITE_SERVER_URL}/home-private/mi-tienda?rut=126643675`)
+		const rut = userSession.rut
+		const userData = await axios.get(`${VITE_SERVER_URL}/home-private/mi-tienda?rut=${rut}`)
 		const data = userData.data
 		return data
 	}
 
 	const getCarrito = async () => {
-		const userData = await axios.get(`${VITE_SERVER_URL}/home-private/carrito/126643675`)
+		const rut = userSession.rut
+		const userData = await axios.get(`${VITE_SERVER_URL}/home-private/carrito/${rut}`)
 		const data = userData.data
 	return data
 	}
 
 	const getVenta = async () => {
-		const userData = await axios.get(`${VITE_SERVER_URL}/home-private/venta?id=1&rut=126643675&id_v=2&vta=true`)
-		const data = userData.data
+		// const userData = await axios.get(`${VITE_SERVER_URL}/home-private/venta?id=1&rut=126643675&id_v=2&vta=true`)
+		// const data = userData.data
 		window.location.href = '/home-private/venta';
 	return data
 	}
@@ -135,6 +146,39 @@ const MicarProvider = ({ children }) => {
 		const userData = await axios.get(`${VITE_SERVER_URL}/home-private/region/ciudad/${id}`)
 		const data = userData.data
 		return data
+	}
+
+	const getCategoria = async () => {
+		const userData = await axios.get(`${VITE_SERVER_URL}/home-private/producto/categoria`)
+		const data = userData.data
+		return data
+	}
+
+	const postProducto = async () => {
+		
+		const rut = userSession.rut
+		const categoria = document.getElementById("cat").value
+		const producto = document.getElementById("pro").value
+		const descripcion = document.getElementById("des").value
+		const cantidad = document.getElementById("can").value
+		const valor = document.getElementById("val").value
+		const image = "imagen-perfil-jpg"
+		const likes = 1
+		const userData ={
+			categoria,
+			rut,
+			producto,
+			descripcion,
+			cantidad,
+			valor,
+			image,
+			likes,	
+		};
+
+		const response = await axios.post(`${VITE_SERVER_URL}/home-private/agregar`,userData)
+		const {data} = response.data	
+		return data
+
 	}
 
 	const postPerfil = async () => {
@@ -172,6 +216,28 @@ const MicarProvider = ({ children }) => {
 		 const {data} = response.data	
 		 return data
 
+	}
+
+	const postCarrito = async (data) => {
+		const year = new Date().getFullYear()
+		const {idpro,valor} = data
+		const id_detalle = new Date().getFullYear()
+		const per_rut = userSession.rut
+		const id_producto = data[0]
+		const cantidad = 1
+		const total = data[1]
+
+		const userData ={
+			id_detalle,
+			per_rut,
+			id_producto,
+			cantidad,
+			total,	
+		};
+
+		const response = await axios.post(`${VITE_SERVER_URL}/home-private/carrito`,userData)
+		const {datas} = response.data	
+		return datas
 	}
 
 	const handleLoginSubmit = async (event) => {
@@ -234,6 +300,9 @@ const MicarProvider = ({ children }) => {
 					getDetPiv,
 					getPerfil,
 					putPerfil,
+					postProducto,
+					getCategoria,
+					postCarrito,
 					handleLoginSubmit 
 				}}
 			>

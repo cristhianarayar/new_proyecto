@@ -1,12 +1,13 @@
 import "./Misproductos.css";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
+import { MicarContext } from "../../context/MicarProvider";
+import { useContext } from "react";
 
 const Cardmisproductos = (produc) => {
-
   return (
     <>
-        <Card style={{ width: "18rem" }}>
+        <Card style={{ width: "18rem" }} >
           <Card.Img variant="top" src="../cardprueba.jpg" className="card-img-top"/>
           <Card.Body>
             <Card.Title>{produc.prod.pro_nom}</Card.Title>

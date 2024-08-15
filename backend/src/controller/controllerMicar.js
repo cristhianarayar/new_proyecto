@@ -304,7 +304,22 @@ const getCtrlVenta = async (req,res,next) => {
     }
 }
 
+const getCtrlCategoria = async (req,res,next) => {
+    try {
+        const category = await queryMicar.mostrarCategoria()
+        if(category.code != 404){
+            res.status(200).send(category)
+        }else{
+            res.status(404).send('No existe categoria')
+        }
+    } catch (error) {
+        console.log(error)
+        res.status(500).json({message:'Internal Server Error'})
+        next(error)
+    }
+}
+
 module.exports = {putCtrlPass, putCtrlPerfil, postCtrLogin,postCtrRegistro,getCtrPerfil, 
     getCtrlTienda, getCtrlTiendaUser, postCtrRegProd, getCtrlBuscarProd, getCtrlDetalleProd,
     getCtrlVenta, postCtrlVenta, putCtrlCarrito, getCtrlCarrito, postCtrlCarrito, putCtrlProducto,
-    getCtrlRegion, getCtrlCiudad, getCtrlComuna,getCrtlUsu}
+    getCtrlRegion, getCtrlCiudad, getCtrlComuna, getCrtlUsu, getCtrlCategoria}

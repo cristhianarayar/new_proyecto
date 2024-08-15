@@ -14,6 +14,7 @@ const Bodyprivate = (props) => {
   const getTiendasPrivate = async () =>{
     const data = await getTiendaPrivate()
     setProducto(data)
+    console.log(data)
   }
     
   useEffect(()=>{

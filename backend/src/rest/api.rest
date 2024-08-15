@@ -16,6 +16,9 @@ GET http://localhost:3000/home-private/region/1
 GET http://localhost:3000/home-private/region/ciudad/1
 
 ###
+GET http://localhost:3000/home-private/producto/categoria 
+
+###
 POST  http://localhost:3000/login
 Content-Type: application/json   
  

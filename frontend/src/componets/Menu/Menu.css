@@ -29,7 +29,7 @@
 
 
 .btn-cart{
-    background-image: url('./src/assets/carrito-de-compras.png');
+    background-image: url('../carrito-de-compras.png');
     background-size: cover;
     background-color: #d0edf2;
     border: #d0edf2;
@@ -38,7 +38,7 @@
 }
 
 .btn-user{
-    background-image: url('./src/assets/user.png');
+    background-image: url('../user.png');
     background-size: cover;
     background-color: #d0edf2;
     border: #d0edf2;
@@ -48,7 +48,7 @@
 }
 
 .btn-home{
-    background-image: url('./src/assets/home.png');
+    background-image: url('../home.png');
     background-size: cover;
     background-color: #d0edf2;
     border: #d0edf2;

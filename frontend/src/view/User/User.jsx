@@ -51,7 +51,7 @@ function User(props) {
           <h3>{props.title}</h3>
         </div>
         <div className="img-title">
-          <img src="../../src/assets/user.png" className="img-perfil" />
+          <img src="../../user.png" className="img-perfil" />
         </div>
       </div>
       {

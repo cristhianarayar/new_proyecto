@@ -34,7 +34,7 @@ const Cardpublic = (produc) => {
   return (
     <>
         <Card style={{ width: "18rem" }}>
-          <Card.Img variant="top" src="./src/assets/cardprueba.jpg" className="card-img-top"/>
+          <Card.Img variant="top" src="../cardprueba.jpg" className="card-img-top"/>
           <Card.Body>
             <Card.Title>{produc.prod.pro_nom}</Card.Title>
               <hr/>
@@ -55,7 +55,7 @@ const Cardpublic = (produc) => {
         <Modal.Body>  
           <div className="cuerpo">
               <div className="img-modal">
-                <Image src="./src/assets/cardprueba.jpg" className="img-mod"/>
+                <Image src="../cardprueba.jpg" className="img-mod"/>
               </div>
               <div className="desc-modal">
                   <p className="desc ms-3 mt-4"><strong>Descripción:</strong><p  id="des"></p></p>

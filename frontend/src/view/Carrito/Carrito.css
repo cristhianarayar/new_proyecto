@@ -39,7 +39,7 @@ h3{
 }
 
 .img-agr1{
-    background-image: url("../../src/assets/suma.png" );
+    background-image: url("../../suma.png" );
     background-size: cover;
     background-color: transparent;
     border: 0px;
@@ -48,7 +48,7 @@ h3{
 }
 
 .img-agr2{
-    background-image: url("../../src/assets/resta.png" );
+    background-image: url("../../resta.png" );
     background-size: cover;
     background-color: transparent;
     border: 0px;

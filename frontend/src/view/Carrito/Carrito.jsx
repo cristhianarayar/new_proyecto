@@ -38,7 +38,7 @@ const Carrito = (props) =>{
           {
             producto.map((produc,i) => (
               <tr key = {i} id = "{setId(i)}">
-                <td className="aline1 td-img"><Image src="../../src/assets/cardprueba.jpg" rounded className="img-card1"/></td>
+                <td className="aline1 td-img"><Image src="../cardprueba.jpg" rounded className="img-card1"/></td>
                 <td className="aline1">{produc.pro_nom}</td>
                 <td className="aline1">{produc.pro_desc}</td>
                 <td className="aline1"><Button className="img-agr1 me-2"/>{produc.det_cant}<Button className="img-agr2 ms-2 mb-2"/></td>

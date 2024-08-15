@@ -7,7 +7,7 @@ const Cardmisproductos = (produc) => {
   return (
     <>
         <Card style={{ width: "18rem" }}>
-          <Card.Img variant="top" src="../src/assets/cardprueba.jpg" className="card-img-top"/>
+          <Card.Img variant="top" src="../cardprueba.jpg" className="card-img-top"/>
           <Card.Body>
             <Card.Title>{produc.prod.pro_nom}</Card.Title>
               <hr/>

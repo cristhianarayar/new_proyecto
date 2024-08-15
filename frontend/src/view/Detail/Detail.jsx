@@ -6,7 +6,7 @@ const Detail = () => {
   return (
     <div className="detail">
       <div className="detail-img">
-        <Image src="./src/assets/cardprueba.jpg" rounded className="img-card" />
+        <Image src="../cardprueba.jpg" rounded className="img-card" />
       </div>
       <div className="detail-txt">
         <p>Producto:</p>
